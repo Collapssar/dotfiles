@@ -14,6 +14,8 @@ null_ls.setup({
         formatting.shfmt,
         -- gofmt
         formatting.gofmt,
+        -- goimports
+        formatting.goimports,
         -- rust
         formatting.rustfmt,
         -- frontend
