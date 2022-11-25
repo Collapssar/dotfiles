@@ -1,4 +1,4 @@
- require('tabline').setup {
+require('tabline').setup {
       -- Defaults configuration options
       enable = true,
       options = {
@@ -16,7 +16,7 @@
         show_tabs_only = false, -- this shows only tabs instead of tabs + buffers
       }
     }
-    vim.cmd[[
-      set guioptions-=e " Use showtabline in gui vim
-      set sessionoptions+=tabpages,globals " store tabpages and globals in session
-    ]]
+vim.cmd[[
+  set guioptions-=e " Use showtabline in gui vim
+  set sessionoptions+=tabpages,globals " store tabpages and globals in session
+]]

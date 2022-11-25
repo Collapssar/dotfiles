@@ -14,6 +14,8 @@ require('rust-tools').setup({
 
             -- 绑定快捷键
             require("keybindings").mapLSP(buf_set_keymap)
+            -- 保存时自动格式化
+            vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.format()')
         end,
     },
 })
