@@ -13,7 +13,7 @@ M.general = {
     ["L"] = { "$", "end of line" },
 
     ["q"] = { ":q<CR>", "end of line" },
-  }
+  },
 }
 
 M.nvimtree = {
@@ -135,7 +135,7 @@ M.nvterm = {
         require("nvterm.terminal").toggle "float"
       end,
       "toggle floating term",
-   },
+    },
 
     ["<leader>t"] = {
       function()

@@ -20,31 +20,32 @@ return {
 
         -- go
         "gopls",
+        "goimports",
       },
     },
   },
   ["NvChad/ui"] = {
-  override_options = {
-    statusline = {
-      separator_style = "round",
-      overriden_modules = function()
-        return require "custom.plugins.statusline"
-      end,
+    override_options = {
+      statusline = {
+        separator_style = "round",
+        overriden_modules = function()
+          return require "custom.plugins.statusline"
+        end,
+      },
+      tabufline = {
+        lazyload = false, -- to show tabufline by default
+        overriden_modules = function()
+          return require "custom.plugins.tabufline"
+        end,
+      },
     },
-    tabufline = {
-     lazyload = false, -- to show tabufline by default
-     overriden_modules = function()
-       return require "custom.plugins.tabufline"
-     end,
-   },
   },
-},
-   ["jose-elias-alvarez/null-ls.nvim"] = {
-      after = "nvim-lspconfig",
-      config = function()
-         require "custom.plugins.null-ls"
-      end,
- },
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.null-ls"
+    end,
+  },
   ["hrsh7th/nvim-cmp"] = {
     override_options = function()
       local cmp = require "cmp"
@@ -61,9 +62,20 @@ return {
   ["nvim-treesitter/nvim-treesitter"] = {
     override_options = {
       ensure_installed = {
-        "json", "html", "css", "lua", "javascript", "go", "rust", "cpp", "gitignore", "markdown", "solidity", "toml", "yaml"
+        "json",
+        "html",
+        "css",
+        "lua",
+        "javascript",
+        "go",
+        "rust",
+        "cpp",
+        "gitignore",
+        "markdown",
+        "solidity",
+        "toml",
+        "yaml",
       },
     },
   },
-
 }
